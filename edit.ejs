@@ -1,0 +1,17 @@
+<h2>Edit Course</h2>
+
+<form action="/courses/<%= course._id %>?_method=PUT" method="POST">
+
+    
+    <p>Course Name: <%= course.courseName %></p>
+
+    <input name="price" value="<%= course.price %>" required />
+    <input name="image" value="<%= course.image %>" required />
+    <input name="duration" value="<%= course.duration %>" required />
+    <input type="date" name="courseStartDate"
+        value="<%= course.courseStartDate.toISOString().split('T')[0] %>" required />
+
+    <button>Update</button>
+</form>
+
+<a href="/courses/<%= course._id %>">Back</a>

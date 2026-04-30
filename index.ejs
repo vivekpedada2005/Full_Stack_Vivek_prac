@@ -1,0 +1,14 @@
+<h2>All Courses</h2>
+
+<a href="/courses/new">Add Course</a>
+<a href="/logout">Logout</a>
+
+<ul>
+    <% courses.forEach(c => { %>
+        <li>
+            <a href="/courses/<%= c._id %>">
+                <%= c.courseName %>
+            </a>
+        </li>
+    <% }) %>
+</ul>
