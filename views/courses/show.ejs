@@ -1,0 +1,15 @@
+<h2><%= course.courseName %></h2>
+
+<img src="<%= course.image %>" width="200"/>
+
+<p>Price: <%= course.price %></p>
+<p>Duration: <%= course.duration %></p>
+<p>Start Date: <%= course.courseStartDate.toDateString() %></p>
+
+<a href="/courses/<%= course._id %>/edit">Edit</a>
+
+<form action="/courses/<%= course._id %>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>
+
+<a href="/courses">Back</a>
